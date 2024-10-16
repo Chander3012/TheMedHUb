@@ -2,51 +2,63 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TheMedHub</title>
-    <link rel="shortcut icon" href="img/pin.png" type="image/x-icon">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TheMedHub</title>
+  <link rel="shortcut icon" href="img/pin.png" type="image/x-icon">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
 
 <body>
-    <nav class="navbar bg-info">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="index.html"><img src="img/pin.png" alt="Logo" width="30" height="28" class="d-inline-block align-text-top"> TheMedHub</a>
-            <form class="d-flex" role="search">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-success" type="submit">Search</button>
-            </form>
+  <div class="hero">
+
+    <nav class="navbar navbar-expand-lg ">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html"><b>TheMedHub</b></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+          </ul>
+
+          <!-- Filters moved into Navbar -->
+          <div class="d-flex">
+            <h5 class="me-3">Filters:</h5>
+            <div class="form-check me-2">
+              <input class="form-check-input filter-checkbox" type="checkbox" value="cream" id="filterCream">
+              <label class="form-check-label" for="filterCream">Cream</label>
+            </div>
+            <div class="form-check me-2">
+              <input class="form-check-input filter-checkbox" type="checkbox" value="liquid" id="filterLiquid">
+              <label class="form-check-label" for="filterLiquid">Liquid</label>
+            </div>
+            <div class="form-check me-2">
+              <input class="form-check-input filter-checkbox" type="checkbox" value="syrup" id="filterSyrup">
+              <label class="form-check-label" for="filterSyrup">Syrup</label>
+            </div>
+          </div>
         </div>
-      </nav>
-       <!-- Sidebar -->
-    <div id="sidebar" class="sidebar">
-      <h2>Filters</h2>
-      <ul>
-          <li>
-              <h3>Item Type</h3>
-              <label><input type="checkbox" value="cream" class="filter-checkbox"> Cream</label><br>
-              <label><input type="checkbox" value="liquid" class="filter-checkbox"> Liquid</label><br>
-              <label><input type="checkbox" value="syrup" class="filter-checkbox"> Syrup</label>
-          </li>
-      </ul>
-  </div>
-
-  <!-- Toggle button for Sidebar on small screens -->
-  <button id="toggleButton" class="toggle-btn">☰ Filters</button>
-
-  <!-- Main Content -->
-  <main>
+      </div>
+    </nav>
+    <div class="container-fluid">
       <h1>Products</h1>
       <input type="text" id="searchInput" placeholder="Search for products..." />
-      <div class="item-container" id="itemContainer">
-          <!-- Product boxes will be generated here dynamically -->
+      <div class="item-container-fluide " id="itemContainer">
+        <!-- Product boxes will be generated here dynamically -->
       </div>
-  </main>
-
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-      <script src="js/app.js"></script>
       
+    </div>
+
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/app.js"></script>
+
 </body>
 
 </html>
