@@ -1,94 +1,47 @@
-/* Global Styles */
 body {
   font-family: 'Arial', sans-serif;
-  background-color: #f0f0f0;
   margin: 0;
   padding: 0;
 }
 
-/* Sidebar */
-.sidebar {
-  background-color: #333;
-  color: white;
-  width: 250px;
-  height: 100%;
-  position: fixed;
-  top: 10;
-  left: 0;
-  padding: 20px;
-  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
-  transition: transform 0.3s ease;
+.hero {
+  background: linear-gradient(45deg, rgb(245, 126, 126), rgb(120, 120, 248));
+  width: 100%;
+  
+
 }
 
-.sidebar h2 {
-  margin-bottom: 20px;
-}
-
-.sidebar h3 {
-  margin: 10px 0;
-}
-
-.sidebar ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-.sidebar ul li {
-  margin-bottom: 20px;
-}
-
-.sidebar label {
-  display: block;
-  margin: 5px 0;
-}
-
-/* Sidebar is hidden on small screens initially */
-.sidebar-hidden {
-  transform: translateX(-100%);
-}
-
-/* Toggle Button */
-.toggle-btn {
-  display: none;
-  background-color: #333;
-  color: white;
-  font-size: 20px;
-  border: none;
+.container-fluid {
   padding: 10px;
-  position: fixed;
-  top: 20px;
-  left: 20px;
-  z-index: 1000;
-  cursor: pointer;
-}
-
-/* Main Content */
-main {
-  margin-left: 270px;
-  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 #searchInput {
   margin-bottom: 20px;
   padding: 10px;
-  width: 300px;
+  max-width: 250px;
 }
 
 /* Product Container */
-.item-container {
+.item-container-fluide {
   display: flex;
+width: 100%;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 25px;
+  justify-content: center;
+    padding: 10px;
 }
 
 /* Product Box */
 .item-box {
-  background-color: white;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  padding: 20px;
-  width: calc(33% - 20px);
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  background-color: #d5e6f1;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 180px;
+    text-align: center;
+    transition: transform 0.3s ease;
   cursor: pointer; /* Pointer cursor to indicate it's clickable */
 }
 
@@ -132,37 +85,8 @@ main {
   cursor: pointer;
 }
 
-/* Responsive Styles */
-@media (max-width: 768px) {
-  .sidebar {
-      width: 200px;
-      transform: translateX(-100%);
-  }
-
-  main {
-      margin-left: 0;
-      padding-top: 60px;
-  }
-
-  .toggle-btn {
-      display: block;
-  }
-
-  .sidebar-visible {
-      transform: translateX(0);
-  }
-}
-
-
 
 /* Navigation Bar Styles */
-.navbar {
-  background-color: #333;
-  color: white;
-  padding: 10px;
-  display: flex;
-  align-items: center;
-}
 
 .container {
   display: flex;
